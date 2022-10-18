@@ -9,6 +9,7 @@ x64/
 
 # Source trees
 libplist/
+libimobiledevice-glue/
 libusbmuxd/
 libimobiledevice/
 idevicerestore/

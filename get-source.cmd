@@ -7,9 +7,13 @@ git clone --single-branch --branch msvc/master https://github.com/libimobiledevi
 git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-win32/idevicerestore
 git clone --single-branch --branch master-msvc https://github.com/libimobiledevice-win32/usbmuxd
 git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-win32/ios-webkit-debug-proxy
+git clone --single-branch --branch master https://github.com/libimobiledevice/libimobiledevice-glue
 
 echo "libplist revision:"
 git -C libplist rev-parse HEAD
+
+echo "libimobiledevice-glue revision:"
+git -C libimobiledevice-glue rev-parse HEAD
 
 echo "libusbmxud revision:"
 git -C libusbmuxd rev-parse HEAD
