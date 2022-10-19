@@ -125,6 +125,11 @@
     <ClInclude Include="libirecovery\src\thread.h" />
     <ClInclude Include="libirecovery\src\utils.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="libplist.vcxproj">
+      <Project>{75352a45-bcb8-4774-8c66-3af9ea6b6b42}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

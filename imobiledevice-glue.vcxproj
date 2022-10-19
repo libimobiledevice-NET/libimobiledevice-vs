@@ -41,6 +41,14 @@
     <ClInclude Include="libimobiledevice-glue\include\libimobiledevice-glue\utils.h" />
     <ClInclude Include="libimobiledevice-glue\src\common.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="libplist.vcxproj">
+      <Project>{75352a45-bcb8-4774-8c66-3af9ea6b6b42}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libusbmuxd.vcxproj">
+      <Project>{527ae686-cd0e-4bc2-9b0f-4bc4cf9621e0}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{89BD797C-EE50-4DBF-BB49-2163530B5EB0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -99,7 +107,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CompileAs>Default</CompileAs>
       <AdditionalIncludeDirectories>$(ProjectDir)\libplist\include\;libimobiledevice-glue\include;libimobiledevice-glue\src</AdditionalIncludeDirectories>
     </ClCompile>
@@ -134,7 +142,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(ProjectDir)\libplist\include\;libimobiledevice-glue\include;libimobiledevice-glue\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
