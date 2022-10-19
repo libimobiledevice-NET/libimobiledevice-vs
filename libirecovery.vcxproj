@@ -122,6 +122,8 @@
     <ClCompile Include="libirecovery\src\thread.c" />
     <ClCompile Include="libirecovery\src\utils.c" />
     <ClInclude Include="libirecovery\include\libirecovery.h" />
+    <ClInclude Include="libirecovery\src\thread.h" />
+    <ClInclude Include="libirecovery\src\utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

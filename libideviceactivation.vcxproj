@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="imobiledevice.vcxproj"/>
-    <ProjectReference Include="libplist.vcxproj"/>
-    <ProjectReference Include="libusbmuxd.vcxproj"/>
+    <ProjectReference Include="imobiledevice.vcxproj" />
+    <ProjectReference Include="libplist.vcxproj" />
+    <ProjectReference Include="libusbmuxd.vcxproj" />
   </ItemGroup>
   <PropertyGroup>
     <PlatformToolset>v142</PlatformToolset>
