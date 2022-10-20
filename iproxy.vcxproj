@@ -19,11 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="libusbmuxd\common\socket.c" />
     <ClCompile Include="libusbmuxd\tools\iproxy.c" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="libusbmuxd.vcxproj" />
+    <ProjectReference Include="imobiledevice-glue.vcxproj">
+      <Project>{89bd797c-ee50-4dbf-bb49-2163530b5eb0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libusbmuxd.vcxproj">
+      <Project>{527ae686-cd0e-4bc2-9b0f-4bc4cf9621e0}</Project>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{64C34ED6-EC5F-4690-B91D-393444071601}</ProjectGuid>
@@ -85,7 +89,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(ProjectDir)\polyfill;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\polyfill;libimobiledevice-glue\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -100,7 +104,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(ProjectDir)\polyfill;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\polyfill;libimobiledevice-glue\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
