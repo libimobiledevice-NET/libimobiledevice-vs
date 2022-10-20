@@ -63,7 +63,7 @@
   <ItemDefinitionGroup>
     <ClCompile>
       <PreprocessorDefinitions>strcasecmp=_stricmp;PACKAGE_STRING="$(ProjectName)";_MBCS;WIN32;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;USBMUXD_EXPORTS;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>libplist\include;libusbmuxd\include;libusbmuxd\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>libplist\include;libusbmuxd\include;libimobiledevice-glue\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;plist.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -122,15 +122,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="libusbmuxd\common\collection.c" />
-    <ClCompile Include="libusbmuxd\common\socket.c" />
-    <ClCompile Include="libusbmuxd\common\thread.c" />
     <ClCompile Include="libusbmuxd\src\libusbmuxd.c" />
-    <ClInclude Include="libusbmuxd\common\collection.h" />
-    <ClInclude Include="libusbmuxd\common\socket.h" />
-    <ClInclude Include="libusbmuxd\common\thread.h" />
     <ClInclude Include="libusbmuxd\include\usbmuxd-proto.h" />
     <ClInclude Include="libusbmuxd\include\usbmuxd.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="imobiledevice-glue.vcxproj">
+      <Project>{89bd797c-ee50-4dbf-bb49-2163530b5eb0}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 </Project>
