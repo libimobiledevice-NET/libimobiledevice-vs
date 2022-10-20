@@ -35,6 +35,8 @@
     <ClCompile Include="libplist\src\Dictionary.cpp" />
     <ClCompile Include="libplist\src\hashtable.c" />
     <ClCompile Include="libplist\src\Integer.cpp" />
+    <ClCompile Include="libplist\src\jplist.c" />
+    <ClCompile Include="libplist\src\jsmn.c" />
     <ClCompile Include="libplist\src\Key.cpp" />
     <ClCompile Include="libplist\src\Node.cpp" />
     <ClCompile Include="libplist\src\plist.c" />
