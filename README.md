@@ -34,6 +34,12 @@ vcpkg\vcpkg integrate install
 vcpkg\vcpkg install libiconv:x64-windows zlib:x64-windows openssl:x64-windows dirent:x64-windows getopt:x64-windows curl:x64-windows libzip:x64-windows libxml2:x64-windows libusb:x64-windows libusb-win32:x64-windows pthreads:x64-windows readline:x64-windows pcre:x64-windows dirent
 ```
 
+To compile for x86 you will also need:
+
+```
+vcpkg\vcpkg install curl:x86-windows libxml2:x86-windows getopt:x86-windows libzip:x86-windows libusb:x86-windows libusb-win32:x86-windows pcre:x86-windows readline:x86-windows
+```
+
 To get the libmobiledevice source code, run:
 
 ```
