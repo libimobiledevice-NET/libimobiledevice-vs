@@ -65,8 +65,8 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <PreprocessorDefinitions>WIN32;HAVE_OPENSSL;_MBCS;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)\libplist\include\;$(ProjectDir)\libusbmuxd\include\;libimobiledevice\;libimobiledevice\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;HAVE_CONFIG_H;HAVE_OPENSSL;_MBCS;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)libplist\include;$(ProjectDir)libusbmuxd\include;$(ProjectDir)libimobiledevice\src;$(ProjectDir)libimobiledevice;$(ProjectDir)libimobiledevice\include;$(ProjectDir)\polyfill;$(ProjectDir)libimobiledevice-glue\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;plist.lib;usbmuxd.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -129,71 +129,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="libimobiledevice\common\debug.h" />
-    <ClInclude Include="libimobiledevice\common\libgen.h" />
-    <ClInclude Include="libimobiledevice\common\socket.h" />
-    <ClInclude Include="libimobiledevice\common\thread.h" />
-    <ClInclude Include="libimobiledevice\common\userpref.h" />
-    <ClInclude Include="libimobiledevice\common\utils.h" />
-    <ClInclude Include="libimobiledevice\include\asprintf.h" />
-    <ClInclude Include="libimobiledevice\include\endianness.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\afc.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\debugserver.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\diagnostics_relay.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\file_relay.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\heartbeat.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\house_arrest.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\installation_proxy.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\libimobiledevice.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\lockdown.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\misagent.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\mobileactivation.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\mobilebackup.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\mobilebackup2.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\mobilesync.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\mobile_image_mounter.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\notification_proxy.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\preboard.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\property_list_service.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\restore.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\sbservices.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\screenshotr.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\service.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\syslog_relay.h" />
-    <ClInclude Include="libimobiledevice\include\libimobiledevice\webinspector.h" />
-    <ClInclude Include="libimobiledevice\resource.h" />
-    <ClInclude Include="libimobiledevice\src\afc.h" />
-    <ClInclude Include="libimobiledevice\src\debugserver.h" />
-    <ClInclude Include="libimobiledevice\src\device_link_service.h" />
-    <ClInclude Include="libimobiledevice\src\diagnostics_relay.h" />
-    <ClInclude Include="libimobiledevice\src\file_relay.h" />
-    <ClInclude Include="libimobiledevice\src\heartbeat.h" />
-    <ClInclude Include="libimobiledevice\src\house_arrest.h" />
-    <ClInclude Include="libimobiledevice\src\idevice.h" />
-    <ClInclude Include="libimobiledevice\src\installation_proxy.h" />
-    <ClInclude Include="libimobiledevice\src\lockdown.h" />
-    <ClInclude Include="libimobiledevice\src\misagent.h" />
-    <ClInclude Include="libimobiledevice\src\mobilebackup.h" />
-    <ClInclude Include="libimobiledevice\src\mobilebackup2.h" />
-    <ClInclude Include="libimobiledevice\src\mobilesync.h" />
-    <ClInclude Include="libimobiledevice\src\mobile_image_mounter.h" />
-    <ClInclude Include="libimobiledevice\src\msc_compat.h" />
-    <ClInclude Include="libimobiledevice\src\msc_config.h" />
-    <ClInclude Include="libimobiledevice\src\notification_proxy.h" />
-    <ClInclude Include="libimobiledevice\src\preboard.h" />
-    <ClInclude Include="libimobiledevice\src\property_list_service.h" />
-    <ClInclude Include="libimobiledevice\src\restore.h" />
-    <ClInclude Include="libimobiledevice\src\sbservices.h" />
-    <ClInclude Include="libimobiledevice\src\screenshotr.h" />
-    <ClInclude Include="libimobiledevice\src\service.h" />
-    <ClInclude Include="libimobiledevice\src\syslog_relay.h" />
-    <ClInclude Include="libimobiledevice\src\webinspector.h" />
+    <ProjectReference Include="imobiledevice-glue.vcxproj">
+      <Project>{89bd797c-ee50-4dbf-bb49-2163530b5eb0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libusbmuxd.vcxproj">
+      <Project>{527ae686-cd0e-4bc2-9b0f-4bc4cf9621e0}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="libimobiledevice\common\debug.c" />
-    <ClCompile Include="libimobiledevice\common\socket.c" />
-    <ClCompile Include="libimobiledevice\common\thread.c" />
     <ClCompile Include="libimobiledevice\common\userpref.c" />
-    <ClCompile Include="libimobiledevice\common\utils.c" />
     <ClCompile Include="libimobiledevice\src\afc.c" />
+    <ClCompile Include="libimobiledevice\src\bt_packet_logger.c" />
+    <ClCompile Include="libimobiledevice\src\companion_proxy.c" />
     <ClCompile Include="libimobiledevice\src\debugserver.c" />
     <ClCompile Include="libimobiledevice\src\device_link_service.c" />
     <ClCompile Include="libimobiledevice\src\diagnostics_relay.c" />
@@ -202,6 +150,7 @@
     <ClCompile Include="libimobiledevice\src\house_arrest.c" />
     <ClCompile Include="libimobiledevice\src\idevice.c" />
     <ClCompile Include="libimobiledevice\src\installation_proxy.c" />
+    <ClCompile Include="libimobiledevice\src\lockdown-cu.c" />
     <ClCompile Include="libimobiledevice\src\lockdown.c" />
     <ClCompile Include="libimobiledevice\src\misagent.c" />
     <ClCompile Include="libimobiledevice\src\mobileactivation.c" />
@@ -214,11 +163,44 @@
     <ClCompile Include="libimobiledevice\src\preboard.c" />
     <ClCompile Include="libimobiledevice\src\property_list_service.c" />
     <ClCompile Include="libimobiledevice\src\restore.c" />
+    <ClCompile Include="libimobiledevice\src\reverse_proxy.c" />
     <ClCompile Include="libimobiledevice\src\sbservices.c" />
     <ClCompile Include="libimobiledevice\src\screenshotr.c" />
     <ClCompile Include="libimobiledevice\src\service.c" />
     <ClCompile Include="libimobiledevice\src\syslog_relay.c" />
     <ClCompile Include="libimobiledevice\src\webinspector.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libimobiledevice\common\debug.h" />
+    <ClInclude Include="libimobiledevice\common\userpref.h" />
+    <ClInclude Include="libimobiledevice\src\afc.h" />
+    <ClInclude Include="libimobiledevice\src\bt_packet_logger.h" />
+    <ClInclude Include="libimobiledevice\src\companion_proxy.h" />
+    <ClInclude Include="libimobiledevice\src\debugserver.h" />
+    <ClInclude Include="libimobiledevice\src\device_link_service.h" />
+    <ClInclude Include="libimobiledevice\src\diagnostics_relay.h" />
+    <ClInclude Include="libimobiledevice\src\file_relay.h" />
+    <ClInclude Include="libimobiledevice\src\heartbeat.h" />
+    <ClInclude Include="libimobiledevice\src\house_arrest.h" />
+    <ClInclude Include="libimobiledevice\src\idevice.h" />
+    <ClInclude Include="libimobiledevice\src\installation_proxy.h" />
+    <ClInclude Include="libimobiledevice\src\lockdown.h" />
+    <ClInclude Include="libimobiledevice\src\misagent.h" />
+    <ClInclude Include="libimobiledevice\src\mobileactivation.h" />
+    <ClInclude Include="libimobiledevice\src\mobilebackup.h" />
+    <ClInclude Include="libimobiledevice\src\mobilebackup2.h" />
+    <ClInclude Include="libimobiledevice\src\mobilesync.h" />
+    <ClInclude Include="libimobiledevice\src\mobile_image_mounter.h" />
+    <ClInclude Include="libimobiledevice\src\notification_proxy.h" />
+    <ClInclude Include="libimobiledevice\src\preboard.h" />
+    <ClInclude Include="libimobiledevice\src\property_list_service.h" />
+    <ClInclude Include="libimobiledevice\src\restore.h" />
+    <ClInclude Include="libimobiledevice\src\reverse_proxy.h" />
+    <ClInclude Include="libimobiledevice\src\sbservices.h" />
+    <ClInclude Include="libimobiledevice\src\screenshotr.h" />
+    <ClInclude Include="libimobiledevice\src\service.h" />
+    <ClInclude Include="libimobiledevice\src\syslog_relay.h" />
+    <ClInclude Include="libimobiledevice\src\webinspector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 </Project>
