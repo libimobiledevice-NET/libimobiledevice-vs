@@ -129,7 +129,9 @@
     <ProjectReference Include="imobiledevice.vcxproj">
       <Project>{ee16e7f2-ac27-4e30-ab22-b02a9c2380b4}</Project>
     </ProjectReference>
-    <ProjectReference Include="libideviceactivation.vcxproj" />
+    <ProjectReference Include="libideviceactivation.vcxproj">
+      <Project>{6f22fd3c-eac0-4bf0-a7de-3b92695666eb}</Project>
+    </ProjectReference>
     <ProjectReference Include="libplist.vcxproj">
       <Project>{75352a45-bcb8-4774-8c66-3af9ea6b6b42}</Project>
     </ProjectReference>
