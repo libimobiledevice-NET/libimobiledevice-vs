@@ -1,7 +1,7 @@
 git clone --single-branch --branch msvc/master https://github.com/waynebonc/libplist
 git clone --single-branch --branch msvc/master https://github.com/waynebonc/libusbmuxd
 git clone --single-branch --branch msvc/master https://github.com/waynebonc/libimobiledevice
-git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-win32/libideviceactivation
+git clone --single-branch --branch msvc/master https://github.com/waynebonc/libideviceactivation
 git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-win32/ideviceinstaller
 git clone --single-branch --branch msvc/master https://github.com/waynebonc/libirecovery
 git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-win32/idevicerestore
