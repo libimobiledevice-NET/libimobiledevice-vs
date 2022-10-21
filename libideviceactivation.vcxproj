@@ -18,11 +18,6 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="imobiledevice.vcxproj" />
-    <ProjectReference Include="libplist.vcxproj" />
-    <ProjectReference Include="libusbmuxd.vcxproj" />
-  </ItemGroup>
   <PropertyGroup>
     <PlatformToolset>v142</PlatformToolset>
     <ProjectName>ideviceactivation</ProjectName>
@@ -127,10 +122,15 @@
     <ClCompile Include="libideviceactivation\src\activation.c" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ClInclude Include="libideviceactivation\include\libideviceactivation.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="libideviceactivation\include\libideviceactivation.h" />
+    <ProjectReference Include="imobiledevice.vcxproj">
+      <Project>{ee16e7f2-ac27-4e30-ab22-b02a9c2380b4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libplist.vcxproj">
+      <Project>{75352a45-bcb8-4774-8c66-3af9ea6b6b42}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 </Project>
