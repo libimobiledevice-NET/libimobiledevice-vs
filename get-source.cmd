@@ -4,7 +4,7 @@ git clone --single-branch --branch msvc/master https://github.com/waynebonc/libi
 git clone --single-branch --branch msvc/master https://github.com/waynebonc/libideviceactivation
 git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-win32/ideviceinstaller
 git clone --single-branch --branch msvc/master https://github.com/waynebonc/libirecovery
-git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-win32/idevicerestore
+git clone --single-branch --branch msvc/master https://github.com/waynebonc/idevicerestore
 git clone --single-branch --branch master-msvc https://github.com/libimobiledevice-win32/usbmuxd
 git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-win32/ios-webkit-debug-proxy
 git clone --single-branch --branch master https://github.com/libimobiledevice/libimobiledevice-glue
