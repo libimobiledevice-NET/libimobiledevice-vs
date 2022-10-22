@@ -218,6 +218,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "inetcat", "inetcat.vcxproj"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "idevicebtlogger", "idevicebtlogger.vcxproj", "{B7A99018-14E4-49C4-8236-1D67BE8370F6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "idevicesetlocation", "idevicesetlocation.vcxproj", "{7E6D547D-87F2-40A7-937E-2134C037A6C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -506,6 +508,14 @@ Global
 		{B7A99018-14E4-49C4-8236-1D67BE8370F6}.Release|Win32.Build.0 = Release|Win32
 		{B7A99018-14E4-49C4-8236-1D67BE8370F6}.Release|x64.ActiveCfg = Release|x64
 		{B7A99018-14E4-49C4-8236-1D67BE8370F6}.Release|x64.Build.0 = Release|x64
+		{7E6D547D-87F2-40A7-937E-2134C037A6C0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7E6D547D-87F2-40A7-937E-2134C037A6C0}.Debug|Win32.Build.0 = Debug|Win32
+		{7E6D547D-87F2-40A7-937E-2134C037A6C0}.Debug|x64.ActiveCfg = Debug|x64
+		{7E6D547D-87F2-40A7-937E-2134C037A6C0}.Debug|x64.Build.0 = Debug|x64
+		{7E6D547D-87F2-40A7-937E-2134C037A6C0}.Release|Win32.ActiveCfg = Release|Win32
+		{7E6D547D-87F2-40A7-937E-2134C037A6C0}.Release|Win32.Build.0 = Release|Win32
+		{7E6D547D-87F2-40A7-937E-2134C037A6C0}.Release|x64.ActiveCfg = Release|x64
+		{7E6D547D-87F2-40A7-937E-2134C037A6C0}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -546,6 +556,7 @@ Global
 		{89BD797C-EE50-4DBF-BB49-2163530B5EB0} = {3D82DA5A-AC7F-42CC-8F68-0B7D701C1140}
 		{6B0BF144-9553-4EFA-AF93-2E9C705059FC} = {BD71AAE2-2013-4CBF-A6C8-8FEA7ECDC77D}
 		{B7A99018-14E4-49C4-8236-1D67BE8370F6} = {BD71AAE2-2013-4CBF-A6C8-8FEA7ECDC77D}
+		{7E6D547D-87F2-40A7-937E-2134C037A6C0} = {BD71AAE2-2013-4CBF-A6C8-8FEA7ECDC77D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {22F8E3CD-A6BA-4F08-9695-1B4A2EE751B2}
