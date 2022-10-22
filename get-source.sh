@@ -7,7 +7,7 @@ git clone --single-branch --branch msvc/master https://github.com/waynebonc/libi
 git clone --single-branch --branch msvc/master https://github.com/waynebonc/idevicerestore
 git clone --single-branch --branch master-msvc https://github.com/libimobiledevice-win32/usbmuxd
 git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-win32/ios-webkit-debug-proxy
-git clone --single-branch --branch master https://github.com/libimobiledevice/libimobiledevice-glue
+git clone --single-branch --branch msvc/master https://github.com/waynebonc/libimobiledevice-glue
 
 # git -C is not available on CentOS 7
 if [ -f /etc/redhat-release ] && [ $(rpm -q --queryformat '%{VERSION}' centos-release) == "7" ]
