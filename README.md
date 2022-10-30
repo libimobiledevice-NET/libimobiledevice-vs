@@ -14,11 +14,12 @@ all of libimobiledevice at once, using Visual Studio.
 
 ## Maintenance 🔧
 
-This project is currently in maintenance mode and may not compile with the latest commit. Currently, preference is given to x86 and retargeting to VS19. Support for VS17 will be removed.
+This project is currently in maintenance mode and may not compile using the latest commit.
 
 * Added libimobiledevice-glue library
 * Silenced warnings and altered project settings that prevented compilation
-* Win32 in Debug fully compiles as of commit [0b07001d5884365a1ace331d644e3b0249c5bc2b](https://github.com/waynebonc/libimobiledevice-vs/tree/0b07001d5884365a1ace331d644e3b0249c5bc2b)
+* Win32 and x64 can compile in both Debug and Release configurations
+* Migrated VS17 projects
 
 ## Getting started
 
