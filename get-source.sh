@@ -1,13 +1,13 @@
-git clone --single-branch --branch msvc/master https://github.com/waynebonc/libplist
-git clone --single-branch --branch msvc/master https://github.com/waynebonc/libusbmuxd
-git clone --single-branch --branch msvc/master https://github.com/waynebonc/libimobiledevice
-git clone --single-branch --branch msvc/master https://github.com/waynebonc/libideviceactivation
-git clone --single-branch --branch msvc/master https://github.com/waynebonc/ideviceinstaller
-git clone --single-branch --branch msvc/master https://github.com/waynebonc/libirecovery
-git clone --single-branch --branch msvc/master https://github.com/waynebonc/idevicerestore
+git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/libplist
+git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/libusbmuxd
+git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/libimobiledevice
+git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/libideviceactivation
+git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/ideviceinstaller
+git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/libirecovery
+git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/idevicerestore
 git clone --single-branch --branch master-msvc https://github.com/libimobiledevice-win32/usbmuxd
 git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-win32/ios-webkit-debug-proxy
-git clone --single-branch --branch msvc/master https://github.com/waynebonc/libimobiledevice-glue
+git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/libimobiledevice-glue
 
 # git -C is not available on CentOS 7
 if [ -f /etc/redhat-release ] && [ $(rpm -q --queryformat '%{VERSION}' centos-release) == "7" ]
