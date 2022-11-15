@@ -63,7 +63,7 @@
   <PropertyGroup>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <TargetName>ideviceactivation</TargetName>
+    <TargetName>libideviceactivation</TargetName>
     <IncludePath>$(ProjectDir)\libideviceactivation\include;$(ProjectDir)\libplist\include;$(ProjectDir)\libusbmuxd\include;$(ProjectDir)\libimobiledevice\include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup>

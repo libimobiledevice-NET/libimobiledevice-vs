@@ -57,7 +57,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <TargetName>irecovery</TargetName>
+    <TargetName>libirecovery</TargetName>
     <OutDir>$(ProjectDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
