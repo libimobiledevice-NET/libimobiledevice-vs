@@ -5,8 +5,8 @@ git clone --single-branch --branch msvc/master https://github.com/libimobiledevi
 git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/ideviceinstaller
 git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/libirecovery
 git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/idevicerestore
-git clone --single-branch --branch master-msvc https://github.com/libimobiledevice-win32/usbmuxd
-git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-win32/ios-webkit-debug-proxy
+git clone --single-branch --branch master-msvc https://github.com/libimobiledevice-NET/usbmuxd
+git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/ios-webkit-debug-proxy
 git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/libimobiledevice-glue
 
 echo "libplist revision:"
