@@ -22,7 +22,7 @@
     <ProjectGuid>{527AE686-CD0E-4BC2-9B0F-4BC4CF9621E0}</ProjectGuid>
     <RootNamespace>libusbmuxd</RootNamespace>
     <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
-    <ProjectName>usbmuxd</ProjectName>
+    <ProjectName>libusbmuxd</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup>
     <PlatformToolset>v142</PlatformToolset>
-    <ProjectName>ideviceactivation</ProjectName>
+    <ProjectName>libideviceactivation</ProjectName>
   </PropertyGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
