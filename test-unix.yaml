@@ -13,7 +13,6 @@ steps:
     ./iproxy --help
     ./idevice_id --help
     ./ideviceactivation --help
-    ./usbmuxd --help
     ./ideviceinstaller --help
     ./irecovery
   displayName: Test executables

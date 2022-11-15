@@ -80,18 +80,6 @@ steps:
       export PKG_CONFIG_PATH="$(brew --prefix)/opt/openssl/lib/pkgconfig:$PKG_CONFIG_PATH"
     fi
 
-    cd usbmuxd
-    ./autogen.sh --prefix=$BUILD_ARTIFACTSTAGINGDIRECTORY/libimobiledevice/$RID --host=$TARGET --with-udevrulesdir=$BUILD_ARTIFACTSTAGINGDIRECTORY/libimobiledevice/$RID/lib/udev --without-systemd
-    make
-    make install
-  displayName: Build usbmuxd
-- script: |
-    export CPATH="$BUILD_ARTIFACTSTAGINGDIRECTORY/libimobiledevice/$RID/include"
-    export PKG_CONFIG_PATH="$BUILD_ARTIFACTSTAGINGDIRECTORY/libimobiledevice/$RID/lib/pkgconfig:$PKG_CONFIG_PATH"
-    if [[ "$OSTYPE" == "darwin"* ]]; then
-      export PKG_CONFIG_PATH="$(brew --prefix)/opt/openssl/lib/pkgconfig:$PKG_CONFIG_PATH"
-    fi
-
     cd ios-webkit-debug-proxy
     ./autogen.sh --prefix=$BUILD_ARTIFACTSTAGINGDIRECTORY/libimobiledevice/$RID --host=$TARGET
     make
@@ -132,7 +120,6 @@ steps:
     git -C libplist archive --prefix=libplist/ --format tar.gz -o $BUILD_ARTIFACTSTAGINGDIRECTORY/libimobiledevice/$RID/sources/libplist.orig.tar.gz HEAD
     git -C libusbmuxd archive --prefix=libusbmuxd/ --format tar.gz -o $BUILD_ARTIFACTSTAGINGDIRECTORY/libimobiledevice/$RID/sources/libusbmuxd.orig.tar.gz HEAD
     git -C libimobiledevice archive --prefix=libimobiledevice/ --format tar.gz -o $BUILD_ARTIFACTSTAGINGDIRECTORY/libimobiledevice/$RID/sources/libimobiledevice.orig.tar.gz HEAD
-    git -C usbmuxd archive --prefix=usbmuxd/ --format tar.gz -o $BUILD_ARTIFACTSTAGINGDIRECTORY/libimobiledevice/$RID/sources/usbmuxd.orig.tar.gz HEAD
     git -C libideviceactivation archive --prefix=libideviceactivation/ --format tar.gz -o $BUILD_ARTIFACTSTAGINGDIRECTORY/libimobiledevice/$RID/sources/libideviceactivation.orig.tar.gz HEAD
     git -C ideviceinstaller archive --prefix=ideviceinstaller/ --format tar.gz -o $BUILD_ARTIFACTSTAGINGDIRECTORY/libimobiledevice/$RID/sources/ideviceinstaller.orig.tar.gz HEAD
     git -C libirecovery archive --prefix=libirecovery/ --format tar.gz -o $BUILD_ARTIFACTSTAGINGDIRECTORY/libimobiledevice/$RID/sources/libirecovery.orig.tar.gz HEAD

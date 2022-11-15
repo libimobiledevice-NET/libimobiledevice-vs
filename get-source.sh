@@ -5,7 +5,6 @@ git clone --single-branch --branch msvc/master https://github.com/libimobiledevi
 git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/ideviceinstaller
 git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/libirecovery
 git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/idevicerestore
-git clone --single-branch --branch master-msvc https://github.com/libimobiledevice-NET/usbmuxd
 git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/ios-webkit-debug-proxy
 git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/libimobiledevice-glue
 
@@ -38,9 +37,6 @@ git -C libirecovery rev-parse HEAD
 
 echo "idevicerestore revision:"
 git -C idevicerestore rev-parse HEAD
-
-echo "usbmuxd revision:"
-git -C usbmuxd rev-parse HEAD
 
 echo "ios-webkit-debug-proxy revision:"
 git -C ios-webkit-debug-proxy rev-parse HEAD

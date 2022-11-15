@@ -26,9 +26,6 @@ steps:
 - checkout: idevicerestore
   path: s/idevicerestore
   target: host
-- checkout: usbmuxd
-  path: s/usbmuxd
-  target: host
 - checkout: ios-webkit-debug-proxy
   path: s/ios-webkit-debug-proxy
   target: host
