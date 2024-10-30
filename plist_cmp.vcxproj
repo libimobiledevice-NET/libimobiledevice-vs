@@ -30,9 +30,9 @@
     <ProjectGuid>{1B0DA277-255F-4E73-AC59-5EE204E15811}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>libplist</RootNamespace>
-    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

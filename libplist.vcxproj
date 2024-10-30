@@ -39,6 +39,10 @@
     <ClCompile Include="libplist\src\jsmn.c" />
     <ClCompile Include="libplist\src\Key.cpp" />
     <ClCompile Include="libplist\src\Node.cpp" />
+    <ClCompile Include="libplist\src\oplist.c" />
+    <ClCompile Include="libplist\src\out-default.c" />
+    <ClCompile Include="libplist\src\out-limd.c" />
+    <ClCompile Include="libplist\src\out-plutil.c" />
     <ClCompile Include="libplist\src\plist.c" />
     <ClCompile Include="libplist\src\ptrarray.c" />
     <ClCompile Include="libplist\src\Real.cpp" />
@@ -61,11 +65,19 @@
     <ClInclude Include="include\plist\String.h" />
     <ClInclude Include="include\plist\Structure.h" />
     <ClInclude Include="include\plist\Uid.h" />
+    <ClInclude Include="libplist\src\base64.h" />
+    <ClInclude Include="libplist\src\bytearray.h" />
+    <ClInclude Include="libplist\src\hashtable.h" />
+    <ClInclude Include="libplist\src\jsmn.h" />
+    <ClInclude Include="libplist\src\plist.h" />
+    <ClInclude Include="libplist\src\ptrarray.h" />
+    <ClInclude Include="libplist\src\strbuf.h" />
+    <ClInclude Include="libplist\src\time64.h" />
+    <ClInclude Include="libplist\src\time64_limits.h" />
     <ClInclude Include="src\base64.h" />
     <ClInclude Include="src\bytearray.h" />
     <ClInclude Include="src\common.h" />
     <ClInclude Include="src\hashtable.h" />
-    <ClInclude Include="src\msc_config.h" />
     <ClInclude Include="src\plist.h" />
     <ClInclude Include="src\ptrarray.h" />
     <ClInclude Include="src\time64.h" />
@@ -75,9 +87,9 @@
     <ProjectGuid>{75352A45-BCB8-4774-8C66-3AF9EA6B6B42}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>libplist</RootNamespace>
-    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>libplist</ProjectName>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -88,7 +100,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -141,9 +153,9 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CompileAs>CompileAsCpp</CompileAs>
-      <AdditionalIncludeDirectories>libplist\libcnary\include;libplist\include;libplist\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\polyfill;libplist\libcnary\include;libplist\include;libplist\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -156,9 +168,9 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CompileAs>CompileAsCpp</CompileAs>
-      <AdditionalIncludeDirectories>libplist\libcnary\include;libplist\include;libplist\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\polyfill;libplist\libcnary\include;libplist\include;libplist\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -173,8 +185,8 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>libplist\libcnary\include;libplist\include;libplist\src</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\polyfill;libplist\libcnary\include;libplist\include;libplist\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -191,8 +203,8 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>libplist\libcnary\include;libplist\include;libplist\src</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\polyfill;libplist\libcnary\include;libplist\include;libplist\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
