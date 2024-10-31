@@ -19,6 +19,50 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="imobiledevice-glue.vcxproj">
+      <Project>{89bd797c-ee50-4dbf-bb49-2163530b5eb0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="imobiledevice.vcxproj">
+      <Project>{ee16e7f2-ac27-4e30-ab22-b02a9c2380b4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libirecovery.vcxproj">
+      <Project>{1f5b7a30-b170-4d4c-89f8-33e4a24cf9ce}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libplist.vcxproj">
+      <Project>{75352a45-bcb8-4774-8c66-3af9ea6b6b42}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libtatsu.vcxproj">
+      <Project>{01bd797c-0000-0000-0000-000000000000}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libusbmuxd.vcxproj">
+      <Project>{527ae686-cd0e-4bc2-9b0f-4bc4cf9621e0}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="idevicerestore\src\ace3.h" />
+    <ClInclude Include="idevicerestore\src\asr.h" />
+    <ClInclude Include="idevicerestore\src\common.h" />
+    <ClInclude Include="idevicerestore\src\dfu.h" />
+    <ClInclude Include="idevicerestore\src\download.h" />
+    <ClInclude Include="idevicerestore\src\endianness.h" />
+    <ClInclude Include="idevicerestore\src\fdr.h" />
+    <ClInclude Include="idevicerestore\src\fls.h" />
+    <ClInclude Include="idevicerestore\src\ftab.h" />
+    <ClInclude Include="idevicerestore\src\idevicerestore.h" />
+    <ClInclude Include="idevicerestore\src\img3.h" />
+    <ClInclude Include="idevicerestore\src\img4.h" />
+    <ClInclude Include="idevicerestore\src\ipsw.h" />
+    <ClInclude Include="idevicerestore\src\limera1n.h" />
+    <ClInclude Include="idevicerestore\src\limera1n_payload.h" />
+    <ClInclude Include="idevicerestore\src\locking.h" />
+    <ClInclude Include="idevicerestore\src\mbn.h" />
+    <ClInclude Include="idevicerestore\src\normal.h" />
+    <ClInclude Include="idevicerestore\src\recovery.h" />
+    <ClInclude Include="idevicerestore\src\restore.h" />
+    <ClInclude Include="polyfill\libgen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="idevicerestore\src\ace3.c" />
     <ClCompile Include="idevicerestore\src\asr.c" />
     <ClCompile Include="idevicerestore\src\common.c" />
     <ClCompile Include="idevicerestore\src\dfu.c" />
@@ -36,56 +80,13 @@
     <ClCompile Include="idevicerestore\src\normal.c" />
     <ClCompile Include="idevicerestore\src\recovery.c" />
     <ClCompile Include="idevicerestore\src\restore.c" />
-    <ClCompile Include="idevicerestore\src\sha1.c" />
-    <ClCompile Include="idevicerestore\src\sha512.c" />
-    <ClCompile Include="idevicerestore\src\tss.c" />
     <ClCompile Include="polyfill\libgen.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="idevicerestore\src\asr.h" />
-    <ClInclude Include="idevicerestore\src\common.h" />
-    <ClInclude Include="idevicerestore\src\dfu.h" />
-    <ClInclude Include="idevicerestore\src\download.h" />
-    <ClInclude Include="idevicerestore\src\endianness.h" />
-    <ClInclude Include="idevicerestore\src\fdr.h" />
-    <ClInclude Include="idevicerestore\src\fixedint.h" />
-    <ClInclude Include="idevicerestore\src\fls.h" />
-    <ClInclude Include="idevicerestore\src\ftab.h" />
-    <ClInclude Include="idevicerestore\src\idevicerestore.h" />
-    <ClInclude Include="idevicerestore\src\img3.h" />
-    <ClInclude Include="idevicerestore\src\img4.h" />
-    <ClInclude Include="idevicerestore\src\ipsw.h" />
-    <ClInclude Include="idevicerestore\src\limera1n.h" />
-    <ClInclude Include="idevicerestore\src\limera1n_payload.h" />
-    <ClInclude Include="idevicerestore\src\locking.h" />
-    <ClInclude Include="idevicerestore\src\mbn.h" />
-    <ClInclude Include="idevicerestore\src\normal.h" />
-    <ClInclude Include="idevicerestore\src\recovery.h" />
-    <ClInclude Include="idevicerestore\src\restore.h" />
-    <ClInclude Include="idevicerestore\src\sha1.h" />
-    <ClInclude Include="idevicerestore\src\sha512.h" />
-    <ClInclude Include="idevicerestore\src\tss.h" />
-    <ClInclude Include="polyfill\libgen.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="imobiledevice-glue.vcxproj">
-      <Project>{89bd797c-ee50-4dbf-bb49-2163530b5eb0}</Project>
-    </ProjectReference>
-    <ProjectReference Include="imobiledevice.vcxproj">
-      <Project>{ee16e7f2-ac27-4e30-ab22-b02a9c2380b4}</Project>
-    </ProjectReference>
-    <ProjectReference Include="libirecovery.vcxproj">
-      <Project>{1f5b7a30-b170-4d4c-89f8-33e4a24cf9ce}</Project>
-    </ProjectReference>
-    <ProjectReference Include="libplist.vcxproj">
-      <Project>{75352a45-bcb8-4774-8c66-3af9ea6b6b42}</Project>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{85BB4A0B-C219-42A5-BDA1-79CF05B5A5A1}</ProjectGuid>
     <RootNamespace>idevicerestore</RootNamespace>
-    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
-    <PlatformToolset>v142</PlatformToolset>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -147,7 +148,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)\polyfill;$(ProjectDir)libimobiledevice-glue\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\polyfill;$(ProjectDir)libimobiledevice-glue\include;$(ProjectDir)libtatsu\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -155,7 +156,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)\polyfill;$(ProjectDir)libimobiledevice-glue\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\polyfill;$(ProjectDir)libimobiledevice-glue\include;$(ProjectDir)libtatsu\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -165,7 +166,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)\polyfill;$(ProjectDir)libimobiledevice-glue\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\polyfill;$(ProjectDir)libimobiledevice-glue\include;$(ProjectDir)libtatsu\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -180,7 +181,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)\polyfill;$(ProjectDir)libimobiledevice-glue\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\polyfill;$(ProjectDir)libimobiledevice-glue\include;$(ProjectDir)libtatsu\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
