@@ -33,8 +33,8 @@
     <ProjectGuid>{D7FBC644-E3BA-4BEE-B896-6F81D9EEB020}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>idevicediagnostics</RootNamespace>
-    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
-    <PlatformToolset>v142</PlatformToolset>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

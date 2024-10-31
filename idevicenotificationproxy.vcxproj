@@ -30,8 +30,8 @@
     <ProjectGuid>{53C55478-5683-42D2-9A6F-D5998D1D0ECC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>idevicenotificationproxy</RootNamespace>
-    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
-    <PlatformToolset>v142</PlatformToolset>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

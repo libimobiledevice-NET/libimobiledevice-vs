@@ -36,8 +36,8 @@
     <ProjectGuid>{C99EF8F0-4A17-4503-9972-8BB9BD107CA1}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>idevicecrashreport</RootNamespace>
-    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
-    <PlatformToolset>v142</PlatformToolset>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

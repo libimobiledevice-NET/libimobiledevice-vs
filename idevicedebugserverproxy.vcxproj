@@ -36,8 +36,8 @@
     <ProjectGuid>{D5F1A4D4-C23A-47EF-91E9-E2C08F6E31B2}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>idevicedebugserverproxy</RootNamespace>
-    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
-    <PlatformToolset>v142</PlatformToolset>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
