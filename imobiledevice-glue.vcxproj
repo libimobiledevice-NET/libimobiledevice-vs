@@ -22,7 +22,11 @@
     <ClCompile Include="libimobiledevice-glue\src\cbuf.c" />
     <ClCompile Include="libimobiledevice-glue\src\collection.c" />
     <ClCompile Include="libimobiledevice-glue\src\glue.c" />
+    <ClCompile Include="libimobiledevice-glue\src\nskeyedarchive.c" />
     <ClCompile Include="libimobiledevice-glue\src\opack.c" />
+    <ClCompile Include="libimobiledevice-glue\src\sha1.c" />
+    <ClCompile Include="libimobiledevice-glue\src\sha256.c" />
+    <ClCompile Include="libimobiledevice-glue\src\sha512.c" />
     <ClCompile Include="libimobiledevice-glue\src\socket.c" />
     <ClCompile Include="libimobiledevice-glue\src\termcolors.c" />
     <ClCompile Include="libimobiledevice-glue\src\thread.c" />
@@ -33,13 +37,17 @@
     <ClInclude Include="libimobiledevice-glue\include\endianness.h" />
     <ClInclude Include="libimobiledevice-glue\include\libimobiledevice-glue\cbuf.h" />
     <ClInclude Include="libimobiledevice-glue\include\libimobiledevice-glue\collection.h" />
+    <ClInclude Include="libimobiledevice-glue\include\libimobiledevice-glue\glue.h" />
+    <ClInclude Include="libimobiledevice-glue\include\libimobiledevice-glue\nskeyedarchive.h" />
     <ClInclude Include="libimobiledevice-glue\include\libimobiledevice-glue\opack.h" />
+    <ClInclude Include="libimobiledevice-glue\include\libimobiledevice-glue\sha.h" />
     <ClInclude Include="libimobiledevice-glue\include\libimobiledevice-glue\socket.h" />
     <ClInclude Include="libimobiledevice-glue\include\libimobiledevice-glue\termcolors.h" />
     <ClInclude Include="libimobiledevice-glue\include\libimobiledevice-glue\thread.h" />
     <ClInclude Include="libimobiledevice-glue\include\libimobiledevice-glue\tlv.h" />
     <ClInclude Include="libimobiledevice-glue\include\libimobiledevice-glue\utils.h" />
     <ClInclude Include="libimobiledevice-glue\src\common.h" />
+    <ClInclude Include="libimobiledevice-glue\src\fixedint.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="libplist.vcxproj">
