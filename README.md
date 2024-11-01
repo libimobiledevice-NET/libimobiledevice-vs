@@ -22,6 +22,12 @@ This project is currently in maintenance mode and may not compile using the late
 * Migrated VS17 projects
 * Added new libimobiledevice tools
 
+### Status
+
+* Azure Pipelines and workflows broken
+* macOS support broken
+* Ubuntu support broken
+
 ## Getting started
 
 You'll need [vcpkg](https://github.com/microsoft/vcpkg) to install dependencies (such as libcurl)
