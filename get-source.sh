@@ -7,6 +7,7 @@ git clone --single-branch --branch msvc/master https://github.com/libimobiledevi
 git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/idevicerestore
 git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/ios-webkit-debug-proxy
 git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/libimobiledevice-glue
+git clone --single-branch --branch msvc/master https://github.com/libimobiledevice-NET/libtatsu
 
 # git -C is not available on CentOS 7
 if [ -f /etc/redhat-release ] && [ $(rpm -q --queryformat '%{VERSION}' centos-release) == "7" ]
@@ -19,6 +20,9 @@ git -C libplist rev-parse HEAD
 
 echo "libimobiledevice-glue revision:"
 git -C libimobiledevice-glue rev-parse HEAD
+
+echo "libtatsu revision:"
+git -C libtatsu rev-parse HEAD
 
 echo "libusbmxud revision:"
 git -C libusbmuxd rev-parse HEAD
