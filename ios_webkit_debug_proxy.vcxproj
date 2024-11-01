@@ -19,10 +19,22 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="imobiledevice.vcxproj">
+      <Project>{ee16e7f2-ac27-4e30-ab22-b02a9c2380b4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libplist.vcxproj">
+      <Project>{75352a45-bcb8-4774-8c66-3af9ea6b6b42}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libusbmuxd.vcxproj">
+      <Project>{527ae686-cd0e-4bc2-9b0f-4bc4cf9621e0}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="ios-webkit-debug-proxy\src\base64.c" />
     <ClCompile Include="ios-webkit-debug-proxy\src\char_buffer.c" />
     <ClCompile Include="ios-webkit-debug-proxy\src\device_listener.c" />
     <ClCompile Include="ios-webkit-debug-proxy\src\hash_table.c" />
+    <ClCompile Include="ios-webkit-debug-proxy\src\idevice_ext.c" />
     <ClCompile Include="ios-webkit-debug-proxy\src\ios_webkit_debug_proxy.c" />
     <ClCompile Include="ios-webkit-debug-proxy\src\ios_webkit_debug_proxy_main.c" />
     <ClCompile Include="ios-webkit-debug-proxy\src\port_config.c" />
@@ -45,14 +57,14 @@
     <ProjectGuid>{B3202DE4-A933-46D3-B268-9C2156ECCAF6}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>ios_webkit_debug_proxy</RootNamespace>
-    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
-    <PlatformToolset>v142</PlatformToolset>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>NotSet</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -108,11 +120,11 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectDir)\ios-webkit-debug-proxy\msvc;$(ProjectDir)\ios-webkit-debug-proxy\include;$(ProjectDir)\ios-webkit-debug-proxy\include\ios-webkit-debug-proxy;$(ProjectDir)\polyfill;$(ProjectDir)\libplist\include;$(ProjectDir)\libimobiledevice\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>HAVE_IDEVICE_CONNECTION_GET_FD;HAVE_CONFIG_H;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);ZIP_CODEC_ENCODE;HAVE_LIBIMOBILEDEVICE_1_1_5;HAVE_LIBIMOBILEDEVICE_1_1</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\ios-webkit-debug-proxy\msvc;$(ProjectDir)\ios-webkit-debug-proxy\include;$(ProjectDir)\ios-webkit-debug-proxy\include\ios-webkit-debug-proxy;$(ProjectDir)\polyfill;$(ProjectDir)\libplist\include;$(ProjectDir)\libusbmuxd\include;$(ProjectDir)\libimobiledevice\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>HAVE_IDEVICE_CONNECTION_GET_FD;HAVE_CONFIG_H;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);ZIP_CODEC_ENCODE;</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>Ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;plist.lib;imobiledevice.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
