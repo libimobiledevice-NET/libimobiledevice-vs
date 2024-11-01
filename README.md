@@ -16,10 +16,11 @@ all of libimobiledevice at once, using Visual Studio.
 
 This project is currently in maintenance mode and may not compile using the latest commit.
 
-* Added libimobiledevice-glue library
+* Added libimobiledevice-glue and libtatsu libraries
 * Silenced warnings and altered project settings that prevented compilation
 * Win32 and x64 can compile in both Debug and Release configurations
 * Migrated VS17 projects
+* Added new libimobiledevice tools
 
 ## Getting started
 
