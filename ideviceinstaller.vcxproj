@@ -24,22 +24,28 @@
     <ClCompile Include="polyfill\libgen.c" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <ProjectReference Include="imobiledevice.vcxproj">
+      <Project>{ee16e7f2-ac27-4e30-ab22-b02a9c2380b4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libplist.vcxproj">
+      <Project>{75352a45-bcb8-4774-8c66-3af9ea6b6b42}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="polyfill\libgen.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{10E88C2B-E98B-4EAA-AA34-9CA59136BBFD}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>ideviceinstaller</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>NotSet</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -95,11 +101,11 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectDir)\polyfill;$(ProjectDir)\libplist\include;$(ProjectDir)\libimobiledevice\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>HAVE_CONFIG_H;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);ZIP_CODEC_ENCODE;HAVE_LIBIMOBILEDEVICE_1_1_5;HAVE_LIBIMOBILEDEVICE_1_1</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\polyfill;$(ProjectDir)\libimobiledevice\include;$(ProjectDir)\libplist\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;WIN32;%(PreprocessorDefinitions);</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;plist.lib;imobiledevice.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
