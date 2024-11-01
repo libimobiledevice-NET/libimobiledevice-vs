@@ -217,6 +217,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libtatsu", "libtatsu.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "afcclient", "afcclient.vcxproj", "{8AF5396D-E3DF-40D9-AAE4-8D23379B0A5E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "idevicedevmodectl", "idevicedevmodectl.vcxproj", "{5F0D09D9-1FE0-4D59-AD0C-23CCA701B5AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -521,6 +523,14 @@ Global
 		{8AF5396D-E3DF-40D9-AAE4-8D23379B0A5E}.Release|Win32.Build.0 = Release|Win32
 		{8AF5396D-E3DF-40D9-AAE4-8D23379B0A5E}.Release|x64.ActiveCfg = Release|x64
 		{8AF5396D-E3DF-40D9-AAE4-8D23379B0A5E}.Release|x64.Build.0 = Release|x64
+		{5F0D09D9-1FE0-4D59-AD0C-23CCA701B5AF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5F0D09D9-1FE0-4D59-AD0C-23CCA701B5AF}.Debug|Win32.Build.0 = Debug|Win32
+		{5F0D09D9-1FE0-4D59-AD0C-23CCA701B5AF}.Debug|x64.ActiveCfg = Debug|x64
+		{5F0D09D9-1FE0-4D59-AD0C-23CCA701B5AF}.Debug|x64.Build.0 = Debug|x64
+		{5F0D09D9-1FE0-4D59-AD0C-23CCA701B5AF}.Release|Win32.ActiveCfg = Release|Win32
+		{5F0D09D9-1FE0-4D59-AD0C-23CCA701B5AF}.Release|Win32.Build.0 = Release|Win32
+		{5F0D09D9-1FE0-4D59-AD0C-23CCA701B5AF}.Release|x64.ActiveCfg = Release|x64
+		{5F0D09D9-1FE0-4D59-AD0C-23CCA701B5AF}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -563,6 +573,7 @@ Global
 		{7E6D547D-87F2-40A7-937E-2134C037A6C0} = {BD71AAE2-2013-4CBF-A6C8-8FEA7ECDC77D}
 		{01BD797C-0000-0000-0000-000000000000} = {3D82DA5A-AC7F-42CC-8F68-0B7D701C1140}
 		{8AF5396D-E3DF-40D9-AAE4-8D23379B0A5E} = {BD71AAE2-2013-4CBF-A6C8-8FEA7ECDC77D}
+		{5F0D09D9-1FE0-4D59-AD0C-23CCA701B5AF} = {BD71AAE2-2013-4CBF-A6C8-8FEA7ECDC77D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {22F8E3CD-A6BA-4F08-9695-1B4A2EE751B2}
